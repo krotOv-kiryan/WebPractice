@@ -377,3 +377,159 @@ body {
         border-radius: 50px;
         background: #ccc;
     }
+
+#content {
+    min-height: 548px;
+    padding-bottom: 60px;
+}
+.uslovia #content > p {
+    margin-bottom: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+p {
+    margin: 0 0 10px;
+}
+.uslovia .white {
+    width: 370px;
+    height: 130px;
+    background: #fff;
+    padding: 40px;
+    margin: 0 auto 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uslovia .white.big {
+    width: inherit;
+    border: 1px solid #a06b4e;
+    height: inherit;
+}
+
+ .bab {
+    background: #f5efe8;
+    padding: 25px 0;
+    font: 30px/48px Magnolia-Script;
+    color: #a06b4e;
+}
+
+ .white span {
+    display: block;
+    font: 24px/26px HelveticaNeueCyr-Light;
+    color: #a06b4e;
+    margin-bottom: 10px;
+}
+
+ .white.big .inline {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 55px;
+    width: 250px;
+}
+
+.white.big .inline.line2 {
+    margin-top: 40px;
+}
+.bab div {
+    margin-top: 10px;
+    font: 28px/30px HelveticaNeueCyr-Light;
+}
+.spb {
+    font: 20px/100px HelveticaNeueCyr-Medium;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    outline: 0 !important;
+}
+.uslovia .butt {
+    display: block;
+    width: 305px;
+    height: 55px;
+    margin: 30px auto;
+    background: #a06b4e;
+    font: 16px/55px HelveticaNeueCyr-Roman;
+    color: #fff;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.uslovia .spb {
+    font: 20px/100px HelveticaNeueCyr-Medium;
+}
+
+.bodyMenu{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    font-family: 'Trebuchet MS'
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60%;
+}
+
+.informBlock{
+    width:30%;
+    height:300px;
+    background: #1b1b1b;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+.informBlock i{
+    color: #e9204f;
+    font-size: 35px;
+    margin-top: 20px;
+    transition: .4s;
+}
+
+.mainText {
+    color: #fff;
+    margin: 55px 0 0 0;
+    font-size: 20px;
+}
+
+.underlineBlock {
+    height: 0;
+    width: 35px;
+    border-top: 2px solid #e9204f;
+    margin-top: 10px;
+    transition: .4s;
+}
+
+.secondText {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.informBlock:hover {
+    background: #e9204f;
+}
+
+.informBlock:hover i {
+    color: #fff;
+}
+
+.informBlock:hover .underlineBlock {
+    border-color: #fff;
+}
