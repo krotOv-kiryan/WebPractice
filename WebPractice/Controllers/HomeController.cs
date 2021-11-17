@@ -38,5 +38,11 @@ namespace WebPractice.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public async Task<IActionResult> SendMessage()
+        {
+            EmailService emailService = new EmailService();
+            await emailService.SendEmailAsync("somemail@mail.ru", "Тема письма", "Тест письма: тест!");
+            return RedirectToAction("Index");
+        }
     }
 }
