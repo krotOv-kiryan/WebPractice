@@ -11,7 +11,7 @@ namespace WebPractice.Models
         public DateTime OrderTime { get; set; } = DateTime.Now;
         public string Status { get; set; } = "Не определен";
 
-        public int KboardId { get; set; }
+        public int ProductId { get; set; }
         public Product Product { get; set; }
     }
 }

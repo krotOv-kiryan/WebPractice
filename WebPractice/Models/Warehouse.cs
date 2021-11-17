@@ -9,7 +9,7 @@ namespace WebPractice.Models
     {
         public static void Initialize(ProductContext context)
         {
-            if (!context.Products.Any())
+           /* if (!context.Products.Any())
             {
                 context.Products.AddRange(
                     new Product
@@ -33,7 +33,7 @@ namespace WebPractice.Models
                 );
                 context.SaveChanges();
 
-            }
+            }*/
         }
     }
 }
