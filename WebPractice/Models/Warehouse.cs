@@ -9,31 +9,31 @@ namespace WebPractice.Models
     {
         public static void Initialize(ProductContext context)
         {
-           /* if (!context.Products.Any())
+            if (!context.Products.Any())
             {
                 context.Products.AddRange(
                     new Product
                     {
-                        Name = "iPhone X",
-                        Description = "Apple",
-                        Price = 14999
+                        Name = "Шашлык",
+                        Description = "Вертел",
+                        Price = 299
                     },
                     new Product
                     {
-                        Name = "Samsung Galaxy Edge",
-                        Description = "Samsung",
-                        Price = 12999
+                        Name = "Пивандрий",
+                        Description = "Хмельнов",
+                        Price = 149
                     },
                     new Product
                     {
-                        Name = "Pixel 3",
-                        Description = "Google",
-                        Price = 11999
+                        Name = "Хычин",
+                        Description = "Класс",
+                        Price = 250
                     }
                 );
                 context.SaveChanges();
 
-            }*/
+            }
         }
     }
 }
