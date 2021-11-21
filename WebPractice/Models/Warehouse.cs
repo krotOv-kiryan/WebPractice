@@ -31,7 +31,7 @@ namespace WebPractice.Models
                         Price = 250
                     }
                 );
-               // context.SaveChanges();
+                //context.SaveChanges();
 
             }
         }

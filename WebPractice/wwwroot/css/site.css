@@ -555,7 +555,21 @@ p {
         padding: 3px 5px;
     }
 
+div#tekst_sverhu_kartinki {
+    position: relative;
+    margin: auto;
+}
 
-.activeDiv{
+.tekst_sverhu_kartinki_1 {
+    position: absolute;
+    bottom: 20%;
+    text-transform: uppercase;
+    color: #a3c6c0;
+    width: 500px;
+}
 
+.tekst_sverhu_kartinki_1 span {
+    font: bold 24px/44px Helvetica, Sans-Serif;
+    background: #00000094;
+    padding: 8px;
 }

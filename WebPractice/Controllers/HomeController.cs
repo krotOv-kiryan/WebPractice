@@ -57,7 +57,28 @@ namespace WebPractice.Controllers
         [Authorize]
         public IActionResult Login()
         {
-            return Content(User.Identity.Name);
+            if (User.Identity.IsAuthenticated)
+            {
+                return Content(User.Identity.Name);
+            }
+            return Content("не аутентифицирован" + User.Identity.Name);
+        }
+
+        [AllowAnonymous]
+        // позволяет открыть доступ для анонимных пользователей. Обычно
+        // он применяется к методам контроллера, который уже защищен атрибутом Authorize
+
+        /*public IActionResult Index()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Content(User.Identity.Name);
+            }
+            return Content("не аутентифицирован");
+        }*/
+        public IActionResult About()
+        {
+            return Content("Authorized");
         }
     }
 }

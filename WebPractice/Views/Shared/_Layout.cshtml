@@ -7,16 +7,39 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        a.rollover {
+            background: url(https://sun9-3.userapi.com/impg/haRVkZ_x0fE5H6kqjBQfEQs3i9fpHgHxnq6QcQ/shR6AXUnt6Y.jpg?size=1280x1070&quality=96&sign=b5b80aa1c483239a20f7889bb812b9fb&type=album); /* Путь к файлу с исходным рисунком  */
+            display: block; /*  Рисунок как блочный элемент */
+            margin: auto;
+            width: 1300px; /* Ширина рисунка */
+            height: 350px; /*  Высота рисунка */
+        }
+
+        a.rollover:hover {
+            background: url(https://sun9-44.userapi.com/impg/U38aa668Gwgt-LqGwycX7SDDdwxug_PoPQJo5A/_s2SFrt7NyQ.jpg?size=1280x1070&quality=96&sign=6720fe97b2151f045615bb0f4d6b7110&type=album); /* Путь к файлу с заменяемым рисунком  */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="text-center">
+        <p><a href="#" class="rollover"> </a></p>
+    </div>
+   
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebPractice</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target=".navbar-collapse" 
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -37,33 +60,33 @@
                         </li>
 
                         @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>*@
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                            </li>*@
 
                         <li class="nav-item dropdown ml-auto">
-                            <a class="nav-link dropdown-toggle text-black-50" 
-                               data-toggle="dropdown" 
+                            <a class="nav-link dropdown-toggle text-black-50"
+                               data-toggle="dropdown"
                                href="#"
                                role="button"
                                aria-haspopup="true"
                                aria-expanded="false">Профиль</a>
 
                             <div class="dropdown-menu-right dropdown-menu">
-                                <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Личный кабинет</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Login">Авторизация</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Выйти</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Register">Регистрация</a>
 
                                 @*<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">Выйти (@User.Identity.Name)</a>*@
                             </div>
                         </li>
 
                         @*}
-                        else
-                        {
-                        <li class="nav-item ml-auto">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-                        </li>
-                        }*@
+                            else
+                            {
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            }*@
                     </ul>
                 </div>
             </div>
@@ -79,19 +102,18 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - WebPractice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                 <div class="text-center">
-                    <h4>
-                       
-                    </h4>
-                 </div>
-         
+            <div class="text-center">
+                <h4>
+                </h4>
+            </div>
+
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">    
+    <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
