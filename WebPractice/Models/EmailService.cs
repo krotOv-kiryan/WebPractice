@@ -10,25 +10,34 @@ namespace WebPractice.Models
 {
     public class EmailService
     {
-        public async Task SendEmailAsync(string email, string subject, string message)
+        public void SendEmail(string Name, string Email, string Password, string Message)
         {
             var emailMessage = new MimeMessage();
 
-            emailMessage.From.Add(new MailboxAddress("Администрация сайта", "login@yandex.ru"));
-            emailMessage.To.Add(new MailboxAddress("", email));
-            emailMessage.Subject = subject;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            emailMessage.From.Add(new MailboxAddress(" ", Email));
+            emailMessage.To.Add(new MailboxAddress(" ", "kirya.krotov.03@mail.ru"));
+            emailMessage.Subject = Name;
+            emailMessage.Body = new TextPart("Plain")
             {
-                Text = message
+                Text = Message
             };
 
             using (var client = new SmtpClient())
             {
-                await client.ConnectAsync("smtp.yandex.ru", 25, false);
-                await client.AuthenticateAsync("login@yandex.ru", "password");
-                await client.SendAsync(emailMessage);
+                try
+                {
+                    //client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                    client.Connect("smtp.mail.ru", 465, true); //587
+                    //client.AuthenticationMechanisms.Remove("XOAUTH2");
+                    client.Authenticate(Email, Password);
+                    client.Send(emailMessage);
 
-                await client.DisconnectAsync(true);
+                    client.Disconnect(true);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
     }

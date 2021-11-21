@@ -533,3 +533,29 @@ p {
 .informBlock:hover .underlineBlock {
     border-color: #fff;
 }
+
+
+.imgblock {
+    position: relative;
+    display: inline-block;
+}
+
+    .imgblock img {
+        width: 100%;
+    }
+
+    .imgblock span {
+        /*background: rgba(0,0,0,0.7); (полупрозрачность)*/
+        background: #222;
+        color: #fff;
+        border-radius: 2px;
+        position: absolute;
+        bottom: 10px;
+        font-size: 18px;
+        padding: 3px 5px;
+    }
+
+
+.activeDiv{
+
+}

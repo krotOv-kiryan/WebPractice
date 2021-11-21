@@ -10,7 +10,6 @@ namespace WebPractice.Models
         public int Id { get; set; }
         public DateTime OrderTime { get; set; } = DateTime.Now;
         public string Status { get; set; } = "Не определен";
-
         public int ProductId { get; set; }
         public Product Product { get; set; }
     }

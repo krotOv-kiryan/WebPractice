@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace WebPractice.Controllers
 
         public IActionResult Menu()
         {
+            //EmailService emailService = new EmailService();
+           // emailService.SendEmail();
             return View();
         }
 
@@ -38,11 +41,23 @@ namespace WebPractice.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public async Task<IActionResult> SendMessage()
+        /*public async Task<IActionResult> SendMessage(string Name, string Email, string Password, string Message)
         {
             EmailService emailService = new EmailService();
-            await emailService.SendEmailAsync("somemail@mail.ru", "Тема письма", "Тест письма: тест!");
+            await emailService.SendEmail(Name, Email, Password, Message); //"kirya.krotov.03@mail.ru", "Тема письма", "Тест письма: тест!"
             return RedirectToAction("Index");
+        }*/
+        public IActionResult SendMessage(string Name, string Email, string Password, string Message)
+        {
+            EmailService emailService = new EmailService();
+            emailService.SendEmail(Name, Email, Password, Message);
+            return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        public IActionResult Login()
+        {
+            return Content(User.Identity.Name);
         }
     }
 }
